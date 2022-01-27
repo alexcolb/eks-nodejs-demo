@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my_application-service
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: my_service.external-dns.my_domain.com
+spec:
+  selector:
+    app: my_application
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 3000
+  type: LoadBalancer
