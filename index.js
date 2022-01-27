@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  const queries = Object.keys(req.query || {}).length;
+  res.send(`Hello World! Received ${queries} query parameter(s).`)
 })
 
 app.listen(3000)

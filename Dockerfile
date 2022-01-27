@@ -1,10 +1,9 @@
-FROM node:14
+FROM node:14-alpine
 
 WORKDIR /opt/eks-nodejs-demo
 
 COPY package-lock.json /opt/eks-nodejs-demo
 COPY package.json /opt/eks-nodejs-demo
-
 RUN npm ci --silent
 
 COPY . .
