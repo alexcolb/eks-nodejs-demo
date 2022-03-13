@@ -49,7 +49,7 @@ spec:
           args:
             - --source=service
             - --source=ingress
-            - --domain-filter=external-dns.my-domain.com
+            - --domain-filter=external-dns.my-domain.com # TODO: Update root domain
             - --provider=aws
             - --policy=upsert-only # would prevent ExternalDNS from deleting any records, omit to enable full synchronization
             - --aws-zone-type=public # only look at public hosted zones (valid values are public, private or no value for both)

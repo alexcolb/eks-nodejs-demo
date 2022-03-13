@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: my-application-service
   annotations:
-    external-dns.alpha.kubernetes.io/hostname: my-service.external-dns.my-domain.com
+    external-dns.alpha.kubernetes.io/hostname: my-service.external-dns.my-domain.com  # TODO: Update root domain
 spec:
   selector:
     app: my-application

@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: my-application-container
-          image: my-docker-username/my-app:latest
+          image: my-docker-username/my-app:latest # TODO: Update docker image
           ports:
             - containerPort: 3000
